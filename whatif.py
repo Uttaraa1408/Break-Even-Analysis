@@ -40,7 +40,7 @@ def get_sim_results_df(results):
     """
     dfs = []
     for r in results:
-        df = pd.DataFrame(r['output'])
+        df = df = pd.DataFrame([r['output']])
         df['scenario_num'] = r['scenario_num']
         for key, val in r['scenario_vals'].items():
             df[key] = val
